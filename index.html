@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password generator</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="text-container">
+                <div class="text">
+                    <p class="text-header font-karla">Generate a</p>
+                    <p class="text-header font-karla highlight">random password</p>
+                    <p class="text-paragraph font-inter">Never use an insecure password again.</p>
+                </div>
+                <div class="input-container">
+                    <p class="font-inter">Input length of a password:</p>
+                    <input id="input" class="input" type="range" min="4" max="20" step="1" value="16"
+                        onchange="showPasswordLength()">
+                    <div class="input-length font-inter">16</div>
+                </div>
+                <div class="button-container">
+                    <button class="button button-text_style font-inter" type="button" onclick="displayPasswords()">
+                        <img src="./icons/on_button-icon.png" alt="thunderbolt icon">
+                        Generate passwords
+                    </button>
+                </div>
+            </div>
+            
+            <div class="password-container">
+                <div class="password font-inter" onclick="copyToClipboard(this.innerText)"
+                    onmouseover="showCopyMessage(this.innerText)" onmouseout="stopShowingCopyMessage()">
+                    <img src="./icons/password-icon.png" alt="three dots">
+                </div>
+                <div class="password font-inter" onclick="copyToClipboard(this.innerText)" 
+                    onmouseover="showCopyMessage(this.innerText)" onmouseout="stopShowingCopyMessage()">
+                    <img src="./icons/password-icon.png" alt="three dots">
+                </div>
+                <div class="password font-inter" onclick="copyToClipboard(this.innerText)" 
+                    onmouseover="showCopyMessage(this.innerText)" onmouseout="stopShowingCopyMessage()">
+                    <img src="./icons/password-icon.png" alt="three dots">
+                </div>
+                <div class="password font-inter" onclick="copyToClipboard(this.innerText)" 
+                    onmouseover="showCopyMessage(this.innerText)" onmouseout="stopShowingCopyMessage()">
+                    <img src="./icons/password-icon.png" alt="three dots">
+                </div>
+            </div>
+        </div>
+        <div class="positioned font-inter"></div>
+        <script src="index.js"></script>
+    </body>
+</html>
